@@ -1,0 +1,69 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Rotas e Recursos<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+-rotas são caminhos que existem na aplicação
+-exemplo: "/users" onde users é a "recurso" que a rota deseja acesssar
+
+>>>>>>>Metodos http<<<<<<<<
+
+-sao as maneiras que uma aplic~ção conseguem um serviço
+
+GET, POST, PUT, DELETE
+
+-as rotas com o node.js através do http so funcionam com o metodo get
+>>>>>>>>Insominia<<<<<<<<<<<
+
+- software para utilizar outros metodo http
+- testador de rotas e de parametros
+
+>>>>>>>>>>Tipos de parametros<<<<<<<<<<<<<<<
+
+query: Parametros nomeados enviados na rota após o "?" (filtros e paginação) apenas consegue utilzar o get e com a seguinte sintaxe:1
+route:patrametros utili\dos para identifiacr recursos unicos ou especificos:2
+request: corpo principal da aplicação, uma vez que é utilizado para criar ou alterar um recurso:3
+
+//Tds utilizam o insommina
+1)
+app.get ("/users?name=ValorDeUsuarios", (request, response){
+	
+	//para o query e o mesmo para o route, porem trocando "QUERY" por params
+	const parametro = request.QUERY
+}
+
+2)
+app.get("/users/:id", (request, response){
+    const params= request.params;
+
+    console.log(params)}
+
+3)
+app.post("/users", (request, response){
+    const body = request.body;
+
+    console.log(body)}   
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>nodemon<<<<<<<<<<<<<<<<<
+-Estudar o que é
+
+
+>>>>>>>>>>>>>>>>bancos<<<<<<<<<<<<<<<<<<<<<
+-Sql
+-NoSql
+-Formas de conexão com banco: Driver (Select *from) e QueryBuilder( table("usuarios").select(*).where()
+-QueryBuilder: Knex
+-Knex: migrations
+-Ler e estudar
+-connection
+
+>>>>>>>>>>>>Boas praticas<<<<<<<<<<<<
+
+-Encapsular o codigo e sua estrutura
+
+>>>>>Cabeçalho da requisição<<<<<<<<<<<<<<<<<<<
+request.headers
+-authorization
+
+>>>>>>>>>>>>>>>> Sessões do Backend <<<<<<<<<<<<<<<<<<<<<
+
+-Metodo Post tambem serve para criar uma sessão
+
+
